@@ -16,6 +16,14 @@ const boeData = {
       "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
     trackingLink: "Declaration Tracking",
   },
+  623456789: {
+    status: "Assessed",
+    pdfDate: "19/03/2025 12:30:00",
+    amount: "10,500.00 GHS",
+    watermark:
+      "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
+    trackingLink: "Declaration Tracking",
+  },
 };
 
 // Function to get query parameter from URL
