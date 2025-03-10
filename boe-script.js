@@ -6,14 +6,15 @@ const boeData = {
     amount: "3,013.56 GHS",
     watermark:
       "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
-    trackingLink: "https://customs-tracking-link.com/40325141031",
+    trackingLink: "Declaration Tracking",
   },
   123456789: {
-    status: "Pending",
+    status: "Assessed",
     pdfDate: "08/03/2025 10:30:00",
     amount: "1,500.00 GHS",
-    watermark: "Pending Customs Validation",
-    trackingLink: "https://customs-tracking-link.com/123456789",
+    watermark:
+      "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
+    trackingLink: "Declaration Tracking",
   },
 };
 
