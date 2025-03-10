@@ -8,18 +8,18 @@ const boeData = {
       "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
     trackingLink: "https://example.com/tracking/40325141031",
   },
-  123456789: {
+  40325133159: {
     status: "Assessed",
-    pdfDate: "08/03/2025 10:30:00",
-    amount: "1,500.00 GHS",
+    pdfDate: "04/03/2025 17:34:00",
+    amount: "610.11 GHS",
     watermark:
       "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
     trackingLink: "https://example.com/tracking/123456789",
   },
-  623456789: {
+  40325136561: {
     status: "Assessed",
-    pdfDate: "19/03/2025 12:30:00",
-    amount: "10,500.00 GHS",
+    pdfDate: "06/03/2025 16:05:00",
+    amount: "1040.43 GHS",
     watermark:
       "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
     trackingLink: "https://example.com/tracking/623456789",
