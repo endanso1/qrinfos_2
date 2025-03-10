@@ -52,7 +52,7 @@ function loadBOEData() {
   }
 
   // Update BOE details
-  document.getElementById("boe-number").textContent = boeNumber + "/00";
+  document.getElementById("boe-number").textContent = boeNumber;
   document.getElementById("boe-status").textContent = boeData[boeNumber].status;
   document.getElementById("pdf-date").textContent = boeData[boeNumber].pdfDate;
   document.getElementById("amount").textContent = boeData[boeNumber].amount;
