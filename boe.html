@@ -5,26 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOE QR Code Information</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        text-align: center;
+      }
+
+      /* Header */
+      header {
+        background-color: #d2360f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+
+      /* Logo Styling */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adds space between logos */
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .logo img:nth-child(2) {
+        filter: brightness(0) invert(1); /* Makes the second image white */
+      }
+
+      /* Bottom Layer */
+      .bottom-layer {
+        height: 50px;
+        border-bottom: 1px solid black;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      }
+
+      /* Menu Icon */
+      .menu {
+        background-color: #ad1a1a;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 12px 10px; /* Reduced padding */
+      }
+
+      .menu-icon {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 1.3px;
+      }
+
+      /* Section Title */
+      .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        margin-top: 20px;
+      }
+
+      /* Table */
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      /* Proper Amount Payable Alignment */
+      #amount {
+        text-align: right; /* Aligns the text properly */
+      }
+
+      /* Links */
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      /* Red Note Text */
+      .note {
+        color: red;
+        font-size: 12px;
+        margin-top: -10px;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 12rem;
+        font-size: 10px;
+        font-weight: bold;
+        color: #777;
+        padding: 50px;
+      }
+    </style>
   </head>
   <body>
-    <h2>BOE QR Code Information</h2>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <img src="thumb1-removebg-preview.png" alt="ICUMS Logo" />
+        <img src="thumb2-removebg-preview.png" alt="Logo" />
+      </div>
+      <div class="menu">
+        <div class="menu-icon" style="background-color: red"></div>
+        <div class="menu-icon" style="background-color: yellow"></div>
+        <div class="menu-icon" style="background-color: green"></div>
+      </div>
+    </header>
+    <div class="bottom-layer"></div>
 
-    <table>
-      <tr>
-        <th>BOE No.</th>
-        <td id="boeNo"></td>
-      </tr>
-      <tr>
-        <th>PDF Create Date</th>
-        <td id="pdfDate"></td>
-      </tr>
-      <tr>
-        <th>Amount Payable</th>
-        <td id="amount"></td>
-      </tr>
-    </table>
+    <main>
+      <h2 class="section-title">⭕ BOE QR Code Information</h2>
 
-    <p id="errorMessage" style="color: red; display: none">BOE Not Found</p>
+      <table>
+        <tr>
+          <th>BOE No.</th>
+          <td id="boe-number">Loading...</td>
+        </tr>
+        <tr>
+          <th>BOE Status</th>
+          <td id="boe-status">Loading...</td>
+        </tr>
+        <tr>
+          <th>PDF Create Date</th>
+          <td id="pdf-date">Loading...</td>
+        </tr>
+        <tr>
+          <th>Amount Payable</th>
+          <td id="amount">Loading...</td>
+        </tr>
+        <tr>
+          <th>Water Mark</th>
+          <td id="watermark">Loading...</td>
+        </tr>
+        <tr>
+          <th>Declaration Tracking</th>
+          <td><a href="#" id="tracking-link">Loading...</a></td>
+        </tr>
+      </table>
+
+      <p class="note">
+        ※ Click "Declaration Tracking" for the latest BOE information.
+      </p>
+    </main>
+
+    <footer>
+      <p>COPYRIGHT(C)2020 by CUPIA. ALL RIGHTS RESERVED.</p>
+    </footer>
 
     <script src="boe-script.js"></script>
   </body>
