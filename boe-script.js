@@ -62,8 +62,6 @@ function loadBOEData() {
   // Update the tracking link
   const trackingLink = document.getElementById("tracking-link");
   trackingLink.textContent = "Declaration Tracking";
-  trackingLink.href = boeData[boeNumber].trackingLink;
-  trackingLink.target = "#"; // Open in a new tab
 }
 
 // Run function on page load
