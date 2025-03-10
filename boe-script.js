@@ -40,9 +40,7 @@ function loadBOEData() {
   document.getElementById("amount").textContent = boeData[boeNumber].amount;
   document.getElementById("watermark").textContent =
     boeData[boeNumber].watermark;
-  document
-    .getElementById("tracking-link")
-    .setAttribute("href", boeData[boeNumber].trackingLink);
+  document.getElementById("tracking-link").textContent = "Declaration Tracking";
 }
 
 // Run the function on page load
