@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOE QR Code Information</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>BOE QR Code Information</h2>
+
+    <table>
+      <tr>
+        <th>BOE No.</th>
+        <td id="boeNo"></td>
+      </tr>
+      <tr>
+        <th>PDF Create Date</th>
+        <td id="pdfDate"></td>
+      </tr>
+      <tr>
+        <th>Amount Payable</th>
+        <td id="amount"></td>
+      </tr>
+    </table>
+
+    <p id="errorMessage" style="color: red; display: none">BOE Not Found</p>
+
+    <script src="boe-script.js"></script>
+  </body>
+</html>
