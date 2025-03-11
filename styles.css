@@ -7,6 +7,9 @@ body {
 }
 
 #qrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -28,7 +31,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-table {
+/* table {
   width: 85%;
   margin: 20px auto;
   border-collapse: collapse;
@@ -43,4 +46,4 @@ td {
 
 th {
   background-color: #f2f2f2;
-}
+} */

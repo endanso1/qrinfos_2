@@ -14,7 +14,7 @@ function generateQRCode() {
   // Generate QR Code
   new QRCode(document.getElementById("qrcode"), {
     text: boeUrl,
-    width: 200,
-    height: 200,
+    width: 100,
+    height: 100,
   });
 }
