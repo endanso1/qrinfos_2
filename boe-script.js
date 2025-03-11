@@ -1,28 +1,28 @@
 // Sample BOE data
 const boeData = {
   40325141031: {
-    status: "Assessed",
-    pdfDate: "07/03/2025 17:55:31",
+    billNo: "AFO1-G-40325136561-01",
+    boe: "40325141031",
+    tin: "U2503070293",
+    payerName: "OPHELIA GYATEEN",
     amount: "3,013.56 GHS",
-    watermark:
-      "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
-    trackingLink: "https://example.com/tracking/40325141031",
+    pdfDate: "07/03/2025 17:55:31",
   },
-  40325133159: {
-    status: "Assessed",
-    pdfDate: "04/03/2025 17:34:00",
-    amount: "610.11 GHS",
-    watermark:
-      "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
-    trackingLink: "https://example.com/tracking/123456789",
+  40325141031: {
+    billNo: "AFO1-G-40325136561-01",
+    boe: "40325141031",
+    tin: "U2503070293",
+    payerName: "OPHELIA GYATEEN",
+    amount: "3,013.56 GHS",
+    pdfDate: "07/03/2025 17:55:31",
   },
-  40325136561: {
-    status: "Assessed",
-    pdfDate: "06/03/2025 16:05:00",
-    amount: "1040.43 GHS",
-    watermark:
-      "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
-    trackingLink: "https://example.com/tracking/623456789",
+  40325141031: {
+    billNo: "AFO1-G-40325136561-01",
+    boe: "40325141031",
+    tin: "U2503070293",
+    payerName: "OPHELIA GYATEEN",
+    amount: "3,013.56 GHS",
+    pdfDate: "07/03/2025 17:55:31",
   },
 };
 
@@ -38,30 +38,33 @@ function loadBOEData() {
 
   // Convert boeNumber to a string for lookup
   if (!boeNumber || !boeData[boeNumber]) {
-    document.getElementById("boe-number").textContent = "Not Found";
-    document.getElementById("boe-status").textContent = "N/A";
-    document.getElementById("pdf-date").textContent = "N/A";
+    document.getElementById("bill-number").textContent = "N/A";
+    document.getElementById("boe-number").textContent = "N/A";
+    document.getElementById("tin").textContent = "N/A";
+    document.getElementById("payer-name").textContent = "N/A";
     document.getElementById("amount").textContent = "N/A";
-    document.getElementById("watermark").textContent = "N/A";
+    document.getElementById("pdf-date").textContent = "N/A";
 
-    // Disable tracking link
-    const trackingLink = document.getElementById("tracking-link");
-    trackingLink.textContent = "N/A";
-    trackingLink.removeAttribute("href");
+    // // Disable tracking link
+    // const trackingLink = document.getElementById("tracking-link");
+    // trackingLink.textContent = "N/A";
+    // trackingLink.removeAttribute("href");
     return;
   }
 
   // Update BOE details
+  document.getElementById("bill-number").textContent =
+    boeData[boeNumber].billNo;
   document.getElementById("boe-number").textContent = boeNumber;
-  document.getElementById("boe-status").textContent = boeData[boeNumber].status;
-  document.getElementById("pdf-date").textContent = boeData[boeNumber].pdfDate;
+  document.getElementById("tin").textContent = boeData[boeNumber].tin;
+  document.getElementById("payer-name").textContent =
+    boeData[boeNumber].payerName;
   document.getElementById("amount").textContent = boeData[boeNumber].amount;
-  document.getElementById("watermark").textContent =
-    boeData[boeNumber].watermark;
+  document.getElementById("pdf-date").textContent = boeData[boeNumber].pdfDate;
 
   // Update the tracking link
-  const trackingLink = document.getElementById("tracking-link");
-  trackingLink.textContent = "Declaration Tracking";
+  // const trackingLink = document.getElementById("tracking-link");
+  // trackingLink.textContent = "Declaration Tracking";
 }
 
 // Run function on page load

@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 20px;
-  background-color: #f4f4f4;
+  color: #112a46;
+  background-color: #acc8e5;
 }
 
 #qrcode {
